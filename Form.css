@@ -407,3 +407,15 @@ h1 > span {
   opacity: 1;
 }
 /* -- End Menampilkan form Sign Up --*/
+
+/* Button Form Focus */
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+button:focus,
+a:focus {
+  outline: none;
+}
+/* End Button Form Focus */
