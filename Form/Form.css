@@ -1,0 +1,409 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&display=swap");
+
+body,
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.form {
+  width: 330px;
+  height: 485px;
+  margin: 100px auto;
+  padding: 10px 0;
+  border-radius: 17px;
+  background: #ffff;
+  box-shadow: 0 0 20px #adb2b5;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  cursor: default;
+}
+
+/* input color */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  color: #3e3a3a;
+}
+
+/* Line SLide Animations*/
+.line-slide {
+  height: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  gap: 5px;
+}
+
+.line-one,
+.line-two {
+  width: 10px;
+  height: 10px;
+}
+
+.line-one {
+  background-color: #0abebe;
+  border: 1px solid #0abebe;
+  border-radius: 20px;
+  width: 50px;
+  transition: all 0.3s;
+}
+
+.line-two {
+  background-color: transparent;
+  border: 1px solid #0abebe;
+  border-radius: 20px;
+  transition: all 0.3s;
+}
+
+.one-hover {
+  width: 10px;
+  background-color: transparent;
+}
+
+.two-hover {
+  width: 50px;
+  border: none;
+  background-color: #0abebe;
+}
+/* -- End Slide Animations -- */
+
+/* First Position Sign In & Sign Up */
+/* Sign-In */
+.sign-in {
+  text-align: center;
+  transform: translateX(5%);
+  transition: all 0.3s ease-in;
+}
+
+/* Sign-Up */
+.sign-up {
+  opacity: 0;
+  text-align: center;
+  transition: all 0.3s ease-in;
+  transform: translateX(100px);
+}
+/* -- End First Position Sign In & Sign Up -- */
+
+/* Form Logo */
+.sign-in > .logo > h1,
+.sign-up > .logo > h1 {
+  margin: 35px 0;
+}
+
+h1 > span {
+  font: bolder 70px "Jaro";
+  display: inline-block;
+  color: #fefefe;
+  text-shadow: 0 0 5px #0abebe;
+  transform: scale(1);
+  transition: all 0.3s ease-in;
+}
+
+.logo span:hover {
+  color: #0abebe;
+  text-shadow: 0 0 0 transparent;
+  transform: scale(1.2);
+  filter: none;
+}
+
+.sign-up > .logo {
+  margin: -15px 0 0 0;
+}
+/* -- End Form Logo -- */
+
+/* Input Form */
+/* Sign In Input */
+.sign-in > .input {
+  margin: 20px 0 0 0;
+}
+
+.sign-in > .input > .username-input,
+.sign-in > .input > .password-input,
+.sign-up > .input > .name-input,
+.sign-up > .input > .username-input,
+.sign-up > .input > .email-input,
+.sign-up > .input > .password-input,
+.sign-up > .input > .confirm-password-input {
+  position: relative;
+}
+
+.sign-in > .input > .username-input > .username,
+.sign-in > .input > .password-input > .password,
+.sign-up > .input > .name-input > .name,
+.sign-up > .input > .username-input > .username,
+.sign-up > .input > .email-input > .email,
+.sign-up > .input > .password-input > .password,
+.sign-up > .input > .confirm-password-input > .password {
+  display: block;
+  width: 270px;
+  height: 30px;
+  margin: 40px auto;
+  outline: none;
+  border: none;
+  background: transparent;
+  border-bottom: 2px solid #0abebe;
+  font: 500 15px "Josefin Sans";
+  border-radius: 5px 5px 0 0;
+  padding: 5px 0 0 15px;
+  position: relative;
+}
+
+/* Sign Up Input */
+.sign-up > .input {
+  margin-top: -5px;
+}
+
+.sign-up > .input > .name-input > .name,
+.sign-up > .input > .username-input > .username,
+.sign-up > .input > .email-input > .email,
+.sign-up > .input > .password-input > .password,
+.sign-up > .input > .confirm-password-input > .password {
+  width: 260px;
+  height: 25px;
+  margin: 30px 0;
+}
+/* -- End Input Form -- */
+
+/* show Password */
+.password-input > .show,
+.hide {
+  position: absolute;
+  color: #0abebe;
+  top: 10px;
+  right: 25px;
+  font-size: 25px;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+
+.sign-up .password-input .show, .sign-up .password-input .hide{
+  top: 5px;
+  right: 20px;
+}
+
+.password-input > .show {
+  z-index: 5;
+}
+
+.password-input > .hide {
+  color: transparent;
+  z-index: 2;
+}
+/* End Show Password */
+
+/* Place Holder Input Form */
+.placeholder {
+  position: absolute;
+  top: 21px;
+  left: 25px;
+  transform: translateY(-50%);
+  font: 400 15px "Josefin Sans";
+  color: #7a7a7a;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.sign-up > .input .placeholder {
+  transform: translateY(-65%);
+  margin-left: -5px;
+}
+
+/* Animations Placeholder */
+.place-click-signin {
+  top: -3px;
+  left: 5px;
+  font-size: 18px;
+  color: #0abebe;
+  font-weight: bolder;
+}
+
+.place-click-signup {
+  top: 0px;
+  left: 5px;
+  color: #0abebe;
+  font-size: 16px;
+  font-weight: bolder;
+}
+/* -- End Placeholder -- */
+
+/* Form Checked */
+.sign-up > .checked {
+  margin-left: 10px;
+}
+
+.sign-in > .checked,
+.sign-up > .checked {
+  display: flex;
+  align-items: center;
+  margin: -18px 0 20px 20px;
+}
+
+.sign-in > .checked > .check {
+  width: 12px;
+  height: 12px;
+}
+
+.sign-in > .checked > h4,
+.sign-up > .checked > h4 {
+  margin: 0 0 0 5px;
+  font: 500 16px "Josefin Sans";
+  color: #0abebe;
+}
+/* -- End Form Checked */
+
+/* Another Login */
+.another-login {
+  width: 300px;
+  height: 30px;
+  margin: 0 auto;
+}
+
+.another-login > .other {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.other > .line {
+  width: 65px;
+  border: 1px solid #0abebe;
+}
+
+.other > h4 {
+  font: 500 15px "Josefin Sans";
+  color: #0abebe;
+}
+
+/* icon login */
+.another-login > .icon-login {
+  display: flex;
+  justify-content: center;
+  gap: 17px;
+  margin: 15px 0;
+}
+
+.icon-login > a {
+  font-size: 30px;
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  transition: all 0.2s ease-in-out;
+}
+
+.icon-login > a > .google {
+  border-radius: 50%;
+  background: red;
+  color: white;
+  padding: 3px;
+}
+
+.icon-login > a > .facebook {
+  border-radius: 50%;
+  background: #1877f2;
+  color: white;
+  padding: 3px;
+}
+
+.icon-login > a > .x {
+  border-radius: 50%;
+  background: #000000;
+  color: white;
+  padding: 3px;
+}
+
+/* Icon login hover */
+.icon-login > a:hover {
+  transform: scale(1.1);
+}
+
+.another-login > .icon-login > .icon-down {
+  transform: scale(0.9);
+}
+
+.icon-login > .icon-up {
+  transform: scale(1);
+}
+/* -- End Icon Login -- */
+/* -- End Another Login */
+
+/* button */
+.sign-in > .btn > .sign-in-btn,
+.sign-in > .btn > .sign-up-btn {
+  width: 100px;
+  height: 30px;
+  margin: 5px 7px;
+  border-radius: 15px;
+  background: #fefefe;
+  border: 2px solid #0abebe;
+  font-weight: bold;
+  color: #0abebe;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+
+.sign-up > .btn > .sign-up-btn {
+  width: 170px;
+  height: 35px;
+  border-radius: 20px;
+  background: #fefefe;
+  border: 2px solid #0abebe;
+  font: bold 16px "Josefin sans";
+  color: #0abebe;
+  display: block;
+  margin: 10px auto;
+  transition: all 0.2s ease-in-out;
+}
+
+.sign-up > .btn > a {
+  display: block;
+  margin: 15px 0 0 0;
+  font: bold 18px "Josefin Sans";
+  color: #0abebe;
+  text-decoration: none;
+}
+
+/* Animation Button Click */
+.btn > .button:hover {
+  transform: scale(1.1);
+  border: 2px solid white;
+  background-color: #0abebe;
+  color: white;
+}
+
+.sign-in > .btn > .button-down,
+.sign-up > .btn > .button-down {
+  transform: scale(1);
+  border: 2px solid #0abebe;
+  background-color: #fefefe;
+  color: #0abebe;
+}
+
+.button-up {
+  transform: scale(1);
+  border: 2px solid white;
+  background-color: #0abebe;
+  color: white;
+}
+/* -- End Button -- */
+
+/* Menampilkan form Sign Up */
+.sign-in-slide {
+  transform: translateX(-300px);
+  opacity: 0;
+}
+
+.sign-up-slide {
+  transform: translateX(-275px);
+  opacity: 1;
+}
+/* -- End Menampilkan form Sign Up --*/
